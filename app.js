@@ -71,3 +71,15 @@ function appendItemToShoppingListEL(item) {
 
     shoppingListEl.append(newEl)
 }
+
+Notification.requestPermission().then(permission => {
+    if (permission === "granted") {
+      // Create a new notification after 5 seconds
+      setTimeout(() => {
+        const notification = new Notification("Reminder", {
+          body: "Don't forget to do something!",
+          icon: "/path/to/icon.png"
+        });
+      }, 5000); // 5000 milliseconds = 5 seconds
+    }
+  });
