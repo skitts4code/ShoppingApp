@@ -2,9 +2,19 @@ html,body{
     padding: 0;
     margin: 0;
     font-family: 'Rubik', sans-serif;
-    background-color: goldenrod;
+    background-color: var(--primary-color);
     color: #432000;
     user-select: none;
+}
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #000106;
+}
+
+.dark-theme{
+    --primary-color: #000106;
+    --secondary-color: #fff; 
 }
 img {
     margin-top: 130px;
@@ -112,4 +122,8 @@ span{
     color: teal;
     text-align: center;
     margin: 0 5px;
+}
+#icon{
+    width: 30px;
+    cursor: pointer;
 }

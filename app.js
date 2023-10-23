@@ -12,6 +12,7 @@ const shoppingLIstInDB = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
+const icon = document.getElementById("icon")
 const hrs = document.getElementById('hrs')
 const min = document.getElementById('min')
 const sec = document.getElementById('sec')
@@ -96,3 +97,15 @@ setInterval(()=> {
     
 },1000)
 
+
+
+
+icon.addEventListener("click",function(){
+    document.body.classList.toggle("dark-theme");
+    if(document.body.classList.contains("dark-theme")){
+        icon.src = "img/sun.png"
+    }
+    else{
+        icon.src = "img/moon.png"
+    }
+})
