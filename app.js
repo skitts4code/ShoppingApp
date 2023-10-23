@@ -16,6 +16,7 @@ const icon = document.getElementById("icon")
 const hrs = document.getElementById('hrs')
 const min = document.getElementById('min')
 const sec = document.getElementById('sec')
+const darktext = document.getElementById("dark-text")
 
 
 addButtonEl.addEventListener("click", function() {
@@ -104,8 +105,10 @@ icon.addEventListener("click",function(){
     document.body.classList.toggle("dark-theme");
     if(document.body.classList.contains("dark-theme")){
         icon.src = "img/sun.png"
+        darktext.innerHTML = "The Darkness☠️"
     }
     else{
         icon.src = "img/moon.png"
+        darktext.innerHTML = ""       
     }
 })
