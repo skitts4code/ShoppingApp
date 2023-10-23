@@ -12,6 +12,9 @@ const shoppingLIstInDB = ref(database, "shoppingList")
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 const shoppingListEl = document.getElementById("shopping-list")
+const hrs = document.getElementById('hrs')
+const min = document.getElementById('min')
+const sec = document.getElementById('sec')
 
 
 addButtonEl.addEventListener("click", function() {
@@ -72,14 +75,24 @@ function appendItemToShoppingListEL(item) {
     shoppingListEl.append(newEl)
 }
 
-Notification.requestPermission().then(permission => {
-    if (permission === "granted") {
-      // Create a new notification after 5 seconds
-      setTimeout(() => {
-        const notification = new Notification("Reminder", {
-          body: "Don't forget to do something!",
-          icon: "/path/to/icon.png"
-        });
-      }, 5000); // 5000 milliseconds = 5 seconds
-    }
-  });
+// Notification.requestPermission().then(permission => {
+//     if (permission === "granted") {
+//       // Create a new notification after 5 seconds
+//       setTimeout(() => {
+//         const notification = new Notification("Reminder", {
+//           body: "Don't forget to do something!",
+//           icon: "/path/to/icon.png"
+//         });
+//       }, 5000); // 5000 milliseconds = 5 seconds
+//     }
+//   });
+
+setInterval(()=> {
+    let currentTime = new Date()
+
+    hrs.textContent = (currentTime.getHours()<10?"0":"") + currentTime.getHours()
+    min.textContent = (currentTime.getMinutes()<10?"0":"") + currentTime.getMinutes()
+    sec.textContent = (currentTime.getSeconds()<10?"0":"") + currentTime.getSeconds()
+    
+},1000)
+

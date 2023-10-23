@@ -57,7 +57,7 @@ button:hover{
     max-width: 320px;
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    max-width: 330px;
     margin: 30px auto;
 }
 
@@ -93,4 +93,23 @@ ul li {
 ul li:hover{
  background-color: #FFECC7;
  cursor: pointer;
+}
+span{
+    font-size: 25px;
+    font-weight: bolder;
+    color: teal;
+    text-align: center;
+}
+.clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+.clock span{
+    font-size: 25px;
+    font-weight: bolder;
+    color: teal;
+    text-align: center;
+    margin: 0 5px;
 }
